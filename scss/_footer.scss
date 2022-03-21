@@ -1,0 +1,33 @@
+
+.section-footer {
+    .section-footer-bgcolor {
+      color: $white;
+      background-color: $blue;
+    }
+    a:link {
+        color: $ondarkmenulink;
+    }
+    a:visited {
+        color: $ondarkmenuvisited;
+    }
+    a:hover {
+        color: $ondarkmenuhover;
+    }
+    .row .region {
+        margin-right: 0;
+        margin-left: 0;
+    }
+  }
+
+  .region-disclaimer {
+    font-size: 0.8rem;
+    a:link {
+        color: $link;
+    }
+    a:visited {
+        color: $visited;
+    }
+    a:hover {
+        color: $hover;
+    }
+  }

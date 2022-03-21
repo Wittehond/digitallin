@@ -1,0 +1,28 @@
+.rsbtn.rsexpanded .rsbtn_exp .rsbtn_exp_inner {
+  border-bottom-right-radius: 11.4px;
+  border-top-right-radius: 11.4px;
+  white-space: nowrap;
+}
+
+.rsbtn.rsexpanded .rsbtn_play {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+
+.rsbtn {
+  margin: 0;
+}
+
+a.rspkr_dr_link {
+  margin: 0px 15px 0px 3px;
+}
+
+.block-readspeaker {
+  padding: 8px 12px;
+}
+
+.rsbtn .rsbtn_play .rsbtn_left .rsbtn_text span,
+.rs_addtools .rsbtn_play .rsbtn_left .rsbtn_text span {
+  padding-right: 10px;
+}

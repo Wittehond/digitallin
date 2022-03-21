@@ -1,0 +1,54 @@
+
+.path-agenda,
+.path-node {
+  .field--name-field-datum-end-date {
+    color: $datecolor;
+    margin-bottom: 12px;
+  }
+  .view-agenda {
+    .views-row {
+      background-color: $white;
+      padding: 8px 24px;
+    }
+    .node--view-mode-teaser {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .field--name-field-locatie {
+    .field__label::after {
+      content: ":";
+    }
+  }
+}
+
+.path-frontpage {
+  .view-agenda {
+    .views-row {
+      border-left: 0;
+    }
+  }
+}
+
+.view-agenda {
+  .dateBigBlue {
+    @include dateDayNumber;
+  }
+  .views-row {
+    border-left: 8px solid $red;
+    border-bottom: 1px solid $viewrowbottom;
+    .dateDay {
+      display: inline-block;
+    }
+  }
+  .read-more {
+    a:before {
+      @include blue-link-arrow;
+    }
+  }
+}
+
+.dateContent {
+  font-weight: bold;
+}

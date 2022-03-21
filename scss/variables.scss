@@ -1,0 +1,115 @@
+/* VARIABLES */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+//== Fonts
+$headerfont : 'Open Sans', sans-serif;
+$basefont :   'Open Sans', sans-serif;
+$bodysize :   16px;
+$fullwidthmargin: 48px;
+$bottommargin: 24px;
+
+$topheader: #eaeaea;
+
+// colors
+$primary-shade: #F3F3F3;//#A8CF45;
+$primary-light: lighten($primary-shade, 37%);
+$primary-dark: darken($primary-shade, 12%);
+$accent-shade: #0033A0; //blue
+$accent-light: lighten($accent-shade, 37%);
+$accent-dark: darken($accent-shade, 12%);
+
+// Corporate Colors
+$white: #ffffff;
+$black: #000000;
+$light-blue     		: #1e97d1; //Secondaire backgroundcolorDFEEFE
+$red			      	: #EE1D3B; //Red
+$blue           		: #1933a0; //Blue
+
+$gray-secondary: #f3f3f3;
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+$gray-100: #f8f9fa !default;
+$gray-400: #A1A1A1;
+$gray-800: #343a40 !default;
+$theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$brand-primary: $accent-shade;
+//$brand-success: $green;
+//$brand-info: $teal;
+//$brand-warning: $orange;
+//$brand-danger: $red;
+$brand-inverse: $primary-shade;
+// Body
+//
+// Settings for the `<body>` element.
+//$body-bg: $white;
+//$body-color: $gray-dark;
+$inverse-bg: $primary-shade;
+//$inverse-color: $gray-lighter;
+
+
+// Style anchor elements.
+$link-color: $accent-shade; //#0033A0; //blue
+$link-decoration: none;
+$link-hover-color: red;
+$link-hover-decoration: underline;
+
+// Links
+$link: $link-color;
+$visited: $link-color;
+$hover: $link-hover-color;
+
+$linkondark: #ffffff;
+$visitedondark: #eaeaea;
+$hoverondark: #ffffff;
+
+$mainmenulink: #000000;
+$mainmenuvisited: #282727;
+$mainmenuhover: #F84F5E;
+
+$ondarkmenulink: #eaeaea;
+$ondarkmenuvisited: #eaeaea;
+$ondarkmenuhover: $red;
+
+// Comments
+$comment-spacer-x: 1.25em;
+$comment-spacer-y: 1.25em;
+
+// Responsive font sizes
+$enable-responsive-font-sizes: true;
+$mainmenusize: 18px;
+$breadcrumbfontsize: 12px;
+$font-size-topheader: 12px;
+
+$bgthemacolor: #f5f3f3;
+$bodysize : 16px;
+$column-rule-style: unset;
+$column-width: 300px;
+$dividercolor: $gray-400;
+
+// Backgrounds
+$bgforum: #1933a0;
+$bgcolorforum: #1933a0;
+$bgcontactbeleid: #daecff;
+$bgnewsletter: $red;
+$bgblog: #6B6B6B;
+$bgblogitem: $bgblog;
+$bghighlited: #EEF3FD;
+$bgcontent: #EEF3FD;
+$bgnews: #EEF3FD;
+$bordercolorbottom: $gray-400;
+$border-viewsrow-bottom: $gray-400;
+$bgcolorth: #d8d8d8;
+$bgcolortd: #f3f3f3;
+
+$datecolor: #979797;
+$rowbottomlinecolor : #DFDFDF;
+$mediumgray: #979797;
+
+$divider: $gray-400;
+$viewrowbottom: $gray-400;
+
+

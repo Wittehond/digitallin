@@ -1,0 +1,74 @@
+/* MIXINS */
+
+//
+// Alternate buttons
+//
+@each $color,
+$value in $theme-colors {
+    .btn-#{$color} a {
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .btn-outline-#{$color} a {
+        @include button-outline-variant($value);
+    }
+}
+
+@mixin blue-link-arrow {
+  content: "";
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  background: url(img/arrow-blue-sm.png);
+  background-repeat: no-repeat;
+}
+
+@mixin white-link-arrow {
+  content: "";
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  background: url(img/arrow-white-sm.png);
+  background-repeat: no-repeat;
+}
+
+@mixin blue-header-arrow {
+  content: "";
+  width: 40px;
+  height: 50px;
+  top: 5px;
+  left: 7px;
+  position: absolute;
+  display: inline-block;
+  background: url(img/arrow-blue.png);
+  background-repeat: no-repeat;
+}
+@mixin white-header-arrow {
+  content: "";
+  width: 40px;
+  height: 50px;
+  top: 5px;
+  left: 7px;
+  position: absolute;
+  display: inline-block;
+  background: url(img/arrow-white.png);
+  background-repeat: no-repeat;
+}
+
+@mixin dateDayNumber {
+  font-family: OpenSans-Bold;
+  font-size: 36px;
+  color: #0033A0;
+  text-align: left;
+  line-height: 31px;
+  margin: 0 0 6px 0;
+}
+
+// Usage as a mixin
+.skip-navigation {
+  @include sr-only;
+  @include sr-only-focusable;
+}
