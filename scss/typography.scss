@@ -1,13 +1,12 @@
 /* TYPOGRAPHY */
 /* Google Fonts */
-//@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
-//@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 
 //== Fonts
-$headerfont : 'Open Sans', sans-serif;
-$basefont :   'Open Sans', sans-serif;
+$headerfont : 'Poppins', sans-serif;
+$basefont :   'Poppins', sans-serif;
 $bodysize :   16px;
+
 $fullwidthmargin: 48px;
 $bottommargin: 24px;
 
