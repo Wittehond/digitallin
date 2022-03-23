@@ -2,69 +2,101 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 
-//== Fonts
-$headerfont : 'Poppins', sans-serif;
-$basefont :   'Poppins', sans-serif;
-$bodysize :   16px;
-
-$fullwidthmargin: 48px;
-$bottommargin: 24px;
-
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-serif: Georgia,
-"Times New Roman",
-Times,
-serif !default;
+$font-family-sans-serif:  'Poppins', sans-serif;
+$font-family:        $font-family-sans-serif;
+$font-family-base:   $font-family-sans-serif;
+$font-size-base:     1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:       1.25rem;
+$font-size-sm:       .875rem;
+$font-size-xs:       .75rem;
 
-$font-family-monospace: Menlo, Monaco,
-Consolas,
-"Liberation Mono",
-"Courier New",
-monospace;
+$font-weight-normal:  300;
+$font-weight-bold:    500;
 
-$font-family-base: $font-family-sans-serif;
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: 1.25rem;
-$font-size-sm: .875rem;
-$font-size-xs: .75rem;
-
-$font-weight-normal: normal;
-$font-weight-bold: bold;
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.5;
+$font-weight-base:    $font-weight-normal;
+$line-height-base:    1.5;
 $font-size-secondary: 0.75rem;
-$font-size-h1: 2.2em;
-$font-size-h2: 24px;
-$font-size-h3: 21px;
-$font-size-h4: 18px;
-$font-size-h5: 16px;
-$font-size-h6: 16px;
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $headerfont;
-}
-h1 {
-  font-size: $font-size-h1;
-}
-h2 {
-  font-size: $font-size-h2;
-}
-h3 {
-  font-size: $font-size-h3;
-}
-h4 {
-  font-size: $font-size-h4;
-}
 
-.field__label {
-  font-family: $headerfont;
-  font-size: $font-size-h2;
-}
-.path-node,
-.path-user {
-  .field__label {
-    font-family: $basefont;
-    font-size: $bodysize;
+@mixin page-link{
+  color: $color-link;
+  text-decoration: none;
+  font-weight: $font-weight-normal;
+  cursor:pointer;
+  &:active, &:focus{
+    color: $color-link;
+    text-decoration: underline;
   }
+  @include media-breakpoint-up(md) {
+    &:hover{
+      color: $color-link;
+      text-decoration: underline;
+    }
+  }
+}
+a, a:not([href]):not([tabindex]){
+  @include page-link;
+}
+
+.heading {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  color: $color-text;
+  margin: 0;
+}
+h1, .h1 {
+  font-size: 32px;
+  line-height: 36px;
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+h2, .h2 {
+  font-size: 26px;
+  line-height: 29px;
+  @include media-breakpoint-up(lg) {
+    font-size: 37px;
+    line-height: 41px;
+  }
+}
+h3, .h3 {
+  font-size: 21px;
+  line-height: 24px;
+  @include media-breakpoint-up(lg) {
+    font-size: 26px;
+    line-height: 29px;
+  }
+}
+h4, .h4 {
+  font-size: 16px;
+  line-height: 18px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+h5, .h5 {
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+p, .text-small {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  color: $color-text;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+
+  &.bold, strong, b {
+    font-weight: $font-weight-bold;
+  }
+}
+.error-message {
+  color: $brand-danger;
 }

@@ -1,33 +1,21 @@
 /* IMPORTS */
 
-//@import url(font-awesome.min.css);
 // variables
 @import "variables";
 //bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
-//material design bootstrap
-//@import "../node_modules/mdbootstrap/scss/mdb";
+
 // barrio
 @import "barrio";
+
 // typography
 @import "typography";
+
 // mixins
 @import "mixins";
-@import "readspeaker";
-@import "buttons";
-@import "twitter";
-
-@import "header";
-@import "form";
-@import "front";
-@import "navigation";
-@import "views";
-@import "agenda";
-@import "news";
-@import "forum";
 @import "global";
-@import "temp";
-@import "companies";
-@import "users";
-@import "trainingen";
-@import "footer";
+
+@import "./components/buttons";
+@import "./components/readspeaker";
+
+
