@@ -1,20 +1,22 @@
 /* IMPORTS */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 
-// variables
+//Custom Variables
 @import "variables";
-//bootstrap
+
+//Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// barrio
+//Barrio
 @import "barrio";
 
-// typography
+//Custom base
 @import "typography";
-
-// mixins
 @import "mixins";
 @import "global";
 
+//Components
 @import "./components/buttons";
 @import "./components/readspeaker";
 

@@ -1,3 +1,36 @@
+*, body{
+  font-family:$font-family;
+}
+body{
+  background-color: $color-bg;
+  color: $color-text;
+  font-size: $font-size-base;
+}
+
+.bg{
+  &-primary{
+    background-color:$brand-primary;
+  }
+  &-primary-dark{
+    background-color:$brand-primary-dark;
+  }
+  &-gray{
+    background-color:$color-gray;
+  }
+  &-gray-light{
+    background-color:$color-gray-light;
+  }
+  &-white{
+    background-color:$color-white;
+  }
+  &-green{
+    background-color:$brand-success;
+  }
+  &-orange{
+    background-color:$brand-warning;
+  }
+
+}
 
 .sr-only {
 	border: 0 !important;
