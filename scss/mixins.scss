@@ -1,74 +1,80 @@
 /* MIXINS */
 
-//
-// Alternate buttons
-//
-@each $color,
-$value in $theme-colors {
-    .btn-#{$color} a {
-        @include button-variant($value, $value);
+@mixin screen-reader-text {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+@mixin font-smoothing($value: antialiased){
+  @if $value == antialiased{
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+//Input autofill mixin to overwrite banana yellow color
+@mixin autofill($background, $color) {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        background-color: $background !important;
+        -webkit-box-shadow: 0 0 0 999px $background inset !important;
+        -webkit-text-fill-color: $color !important;
     }
-}
 
-@each $color,
-$value in $theme-colors {
-    .btn-outline-#{$color} a {
-        @include button-outline-variant($value);
+    &:-moz-autofill,
+    &:-moz-autofill:hover,
+    &:-moz-autofill:focus,
+    &:-moz-autofill:active {
+        background-color: $background !important;
+        -webkit-box-shadow: 0 0 0 999px $background inset !important;
+        -webkit-text-fill-color: $color !important;
     }
-}
 
-@mixin blue-link-arrow {
-  content: "";
-  width: 20px;
-  height: 15px;
-  display: inline-block;
-  background: url(img/arrow-blue-sm.png);
-  background-repeat: no-repeat;
-}
+    &:-o-autofill,
+    &:-o-autofill:hover,
+    &:-o-autofill:focus,
+    &:-o-autofill:active {
+        background-color: $background !important;
+        -webkit-box-shadow: 0 0 0 999px $background inset !important;
+        -webkit-text-fill-color: $color !important;
+    }
 
-@mixin white-link-arrow {
-  content: "";
-  width: 20px;
-  height: 15px;
-  display: inline-block;
-  background: url(img/arrow-white-sm.png);
-  background-repeat: no-repeat;
-}
-
-@mixin blue-header-arrow {
-  content: "";
-  width: 40px;
-  height: 50px;
-  top: 5px;
-  left: 7px;
-  position: absolute;
-  display: inline-block;
-  background: url(img/arrow-blue.png);
-  background-repeat: no-repeat;
-}
-@mixin white-header-arrow {
-  content: "";
-  width: 40px;
-  height: 50px;
-  top: 5px;
-  left: 7px;
-  position: absolute;
-  display: inline-block;
-  background: url(img/arrow-white.png);
-  background-repeat: no-repeat;
-}
-
-@mixin dateDayNumber {
-  font-family: OpenSans-Bold;
-  font-size: 36px;
-  color: #0033A0;
-  text-align: left;
-  line-height: 31px;
-  margin: 0 0 6px 0;
-}
-
-// Usage as a mixin
-.skip-navigation {
-  @include sr-only;
-  @include sr-only-focusable;
+    &:-khtml-autofill,
+    &:-khtml-autofill:hover,
+    &:-khtml-autofill:focus,
+    &:-khtml-autofill:active {
+        background-color: $background !important;
+        -webkit-box-shadow: 0 0 0 999px $background inset !important;
+        -webkit-text-fill-color: $color !important;
+    }
 }
