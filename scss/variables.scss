@@ -1,115 +1,94 @@
 /* VARIABLES */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-//== Fonts
-$headerfont : 'Open Sans', sans-serif;
-$basefont :   'Open Sans', sans-serif;
-$bodysize :   16px;
-$fullwidthmargin: 48px;
-$bottommargin: 24px;
+//Brand colors
+$color-pink:        #E0006B;
 
-$topheader: #eaeaea;
+//Interface colors / Gray tones
+$color-gray         : #333333;
+$color-gray-light   : #CFCBC3;
+$color-white        : #FFFFFF;
 
-// colors
-$primary-shade: #F3F3F3;//#A8CF45;
-$primary-light: lighten($primary-shade, 37%);
-$primary-dark: darken($primary-shade, 12%);
-$accent-shade: #0033A0; //blue
-$accent-light: lighten($accent-shade, 37%);
-$accent-dark: darken($accent-shade, 12%);
+//Additional / Functional colors
+$color-green        : #73BD07;
+$color-orange       : #FF7921;
+$color-red          : #FD3535;
+$color-blue         : blue;
 
-// Corporate Colors
-$white: #ffffff;
-$black: #000000;
-$light-blue     		: #1e97d1; //Secondaire backgroundcolorDFEEFE
-$red			      	: #EE1D3B; //Red
-$blue           		: #1933a0; //Blue
-
-$gray-secondary: #f3f3f3;
-// Reassign color vars to semantic color scheme
-$red: #dc3545;
-$yellow: #ffc107;
-$green: #28a745;
-$cyan: #17a2b8;
-$gray-100: #f8f9fa !default;
-$gray-400: #A1A1A1;
-$gray-800: #343a40 !default;
-$theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
-$brand-primary: $accent-shade;
-//$brand-success: $green;
-//$brand-info: $teal;
-//$brand-warning: $orange;
-//$brand-danger: $red;
-$brand-inverse: $primary-shade;
-// Body
-//
-// Settings for the `<body>` element.
-//$body-bg: $white;
-//$body-color: $gray-dark;
-$inverse-bg: $primary-shade;
-//$inverse-color: $gray-lighter;
+$color-text       : $color-gray;
+$color-link       : $color-pink;
+$color-border     : $color-gray-light;
+$color-placeholder: $color-gray-light;
+$color-bg         : rgba($color-gray-light, 0.5);
 
 
-// Style anchor elements.
-$link-color: $accent-shade; //#0033A0; //blue
-$link-decoration: none;
-$link-hover-color: red;
-$link-hover-decoration: underline;
+$primary-shade:     rgba($color-gray-light, 0.5);
+$primary-light:     $color-pink;
+$primary-dark:      $color-pink;
 
-// Links
-$link: $link-color;
-$visited: $link-color;
-$hover: $link-hover-color;
+$accent-shade:      $color-pink;
+$accent-light:      $color-pink;
+$accent-dark:       $color-pink;
 
-$linkondark: #ffffff;
-$visitedondark: #eaeaea;
-$hoverondark: #ffffff;
 
-$mainmenulink: #000000;
-$mainmenuvisited: #282727;
-$mainmenuhover: #F84F5E;
+$gray-100: $color-gray-light;
+$gray-200: $color-gray-light;
+$gray-300: $color-gray-light;
+$gray-400: $color-gray;
+$gray-500: $color-gray;
+$gray-600: $color-gray;
+$gray-700: $color-gray;
+$gray-800: $color-gray;
+$gray-900: $color-gray;
 
-$ondarkmenulink: #eaeaea;
-$ondarkmenuvisited: #eaeaea;
-$ondarkmenuhover: $red;
+
+$theme-colors: ( 
+    primary: $primary-shade, 
+    secondary: $accent-shade, 
+    success: $color-green, 
+    info: $color-blue, 
+    warning: $color-orange, 
+    danger: $color-red, 
+    light: $gray-100, 
+    dark: $gray-800
+);
+
+
+$brand-info: $color-blue;
+$brand-success: $color-green;
+$brand-warning: $color-orange;
+$brand-danger: $color-red;
+$brand-primary: $color-pink;
+$brand-primary-dark: $color-pink;
 
 // Comments
 $comment-spacer-x: 1.25em;
 $comment-spacer-y: 1.25em;
 
-// Responsive font sizes
-$enable-responsive-font-sizes: true;
-$mainmenusize: 18px;
-$breadcrumbfontsize: 12px;
-$font-size-topheader: 12px;
+//Borders
+$border-radius: 10px;
+$border-radius-large: 20px;
+$border-radius-small: 4px;
+$box-shadow: 0 2px 5px 0 rgba($color-gray, 0.40);
+$box-shadow-dark: 0 2px 10px 0 rgba($gray-800, 0.10);
 
-$bgthemacolor: #f5f3f3;
-$bodysize : 16px;
-$column-rule-style: unset;
-$column-width: 300px;
-$dividercolor: $gray-400;
+//Form elements
+$input-height: 40px;
 
-// Backgrounds
-$bgforum: #1933a0;
-$bgcolorforum: #1933a0;
-$bgcontactbeleid: #daecff;
-$bgnewsletter: $red;
-$bgblog: #6B6B6B;
-$bgblogitem: $bgblog;
-$bghighlited: #EEF3FD;
-$bgcontent: #EEF3FD;
-$bgnews: #EEF3FD;
-$bordercolorbottom: $gray-400;
-$border-viewsrow-bottom: $gray-400;
-$bgcolorth: #d8d8d8;
-$bgcolortd: #f3f3f3;
+/* Animations */
+$ease-out: cubic-bezier(.36,.03,.28,.99);
+$ease-in: cubic-bezier(.46,.09,.82,.73);
+$ease-back-end: cubic-bezier(.35,.01,.44,1.75);
+$ease-back-start: cubic-bezier(1.54,.66,-0.08,.49);
 
-$datecolor: #979797;
-$rowbottomlinecolor : #DFDFDF;
-$mediumgray: #979797;
+$transition-out: 0.5s cubic-bezier(.36,.03,.28,.99);
+$transition-out-slow: 1s cubic-bezier(.36,.03,.28,.99);
+$transition-out-fast: 0.15s cubic-bezier(.36,.03,.28,.99);
 
-$divider: $gray-400;
-$viewrowbottom: $gray-400;
+$transition-in: 0.5s cubic-bezier(.46,.09,.82,.73);
+$transition-in-slow: cubic-bezier(.46,.09,.82,.73);
+$transition-in-fast: 0.15s cubic-bezier(.46,.09,.82,.73);
 
-
+$transition: all $transition-out;
+$transition-all-out: all $transition-out;
+$transition-all-in: all $transition-in;
