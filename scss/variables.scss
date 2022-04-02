@@ -2,12 +2,18 @@
 
 
 //Brand colors
-$color-pink:        #E0006B;
+$color-pink         : #CB0767; // for use with white
+$color-pink2        : #FF0066; // for use with black
+$dark-gray          : #1D1D1B;
+$white              : #ffffff;
 
 //Interface colors / Gray tones
 $color-gray         : #333333;
 $color-gray-light   : #CFCBC3;
 $color-white        : #FFFFFF;
+$bgfooter           : $dark-gray;
+$h2colorfooter      : $white;
+$bodycolorfooter    : $white;
 
 //Additional / Functional colors
 $color-green        : #73BD07;
